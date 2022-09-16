@@ -143,7 +143,7 @@
 \begin{center}
 \begin{tikzpicture}
 \clip (0,0) circle (\picureradius);
-\node[anchor=center] at (0,0) {\includegraphics[width=2\picureradius]{img/profile.jpg}}; 
+\node[anchor=center] at (0,0) {\includegraphics[width=2\picureradius]{profile.jpg}}; 
 \end{tikzpicture}
 \end{center}
 \vspace{5mm}
