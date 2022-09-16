@@ -1,0 +1,11 @@
+*.aux
+*.fdb*
+*.fls
+*.out
+*.pdf
+*.gz
+*__latexindent_temp.tex
+*.xmpi
+*creationdate.lua
+*creationdate.timestamp
+*.log
