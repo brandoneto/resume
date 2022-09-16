@@ -1,0 +1,28 @@
+name: Resume Builder
+
+on:
+  push:
+    tags:
+    - '*'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [self-hosted, texlive-test]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a multi-line script
+        run: |
+          echo "Compiling document..."
+          xelatex -shell-escape -ouptut-driver="xdvipdfmx -z 0" cv.tex
+      - uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: cv.pdf
+      - run: echo "Github action [here](https://github.com/brandoneto/resume/actions/workflows/resume.yml)" >> release.md
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "cv.pdf"
+          bodyFile: "release.md"
+          token: ${{secrets.GITHUB_TOKEN}}
