@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, texlive-test]
+    runs-on: [self-hosted, texlive]
     steps:
       - uses: actions/checkout@v2
       - name: Run a multi-line script
