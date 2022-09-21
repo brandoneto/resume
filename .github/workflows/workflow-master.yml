@@ -14,8 +14,11 @@ jobs:
   aks-step:
     uses: brandoneto/terraform-resume/.github/workflows/aks.yml@master
     secrets: inherit
+    needs: terraform-step
   resume-step:
     uses: ./.github/workflows/resume.yml
+    needs: aks-step
   desorty-step:
     uses: brandoneto/terraform-resume/.github/workflows/destory.yml@master
     secrets: inherit
+    needs: resume-step
