@@ -10,8 +10,8 @@ on:
 jobs:
   terraform-step:
     uses: brandoneto/terraform-resume/.github/workflows/blank.yml@master
-  desorty-step:
-    uses: brandoneto/terraform-resume/.github/workflows/destory.yml@master
+  # desorty-step:
+  #   uses: brandoneto/terraform-resume/.github/workflows/destory.yml@master
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
