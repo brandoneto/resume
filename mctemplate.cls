@@ -191,16 +191,16 @@
 % --- CODING TABLE --- %
 
 \newenvironment{codingtable}{%
-    \renewcommand{\arraystretch}{2.5}
+    \renewcommand{\arraystretch}{2}
 	\begin{tabular}{p{\textcolwidth}} 
 }{%
 	\end{tabular}
 }
 
-% --- CODING TABLE --- %
+% --- New Education --- %
 
-\newenvironment{goodstuff}{%
-    \renewcommand{\arraystretch}{1.5}
+\newenvironment{education}{%
+    \renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{p{\textcolwidth}} 
 }{%
 	\end{tabular}
@@ -248,7 +248,7 @@
 	#1 & \parbox[t]{0.83\textwidth}{%
 		 \textbf{#2}% 
 		 \hfill%
-		 {\footnotesize#3}\\%
+		 {\footnotesize#3}%
          \ifblank{#4}{}{#4 \\}
 	}\\
 }

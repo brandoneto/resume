@@ -1,0 +1,15 @@
+name: Master
+
+on:
+  push:
+    tags:
+    - '*'
+
+  workflow_dispatch:
+
+jobs:
+  terraform-step:
+    uses: brandoneto/terraform-resume/.github/workflows/blank.yml@master
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:

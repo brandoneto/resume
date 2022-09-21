@@ -1,12 +1,9 @@
 name: Resume Builder
 
 on:
-  push:
-    tags:
-    - '*'
-
   workflow_dispatch:
-
+  workflow_call:
+  
 jobs:
   build:
     runs-on: [self-hosted, texlive]
