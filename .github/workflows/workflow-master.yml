@@ -7,15 +7,15 @@ on:
 
   workflow_dispatch:
 
-
-
 jobs:
-  # terraform-step:
-  #   uses: brandoneto/terraform-resume/.github/workflows/blank.yml@master
-  #   secrets: inherit
+  terraform-step:
+    uses: brandoneto/terraform-resume/.github/workflows/terraform.yml@master
+    secrets: inherit
+  aks-step:
+    uses: brandoneto/terraform-resume/.github/workflows/aks.yml@master
+    secrets: inherit
+  resume-step:
+    uses: ./.github/workflows/resume.yml
   desorty-step:
     uses: brandoneto/terraform-resume/.github/workflows/destory.yml@master
     secrets: inherit
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
