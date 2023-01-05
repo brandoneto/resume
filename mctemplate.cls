@@ -245,7 +245,7 @@
 	\end{tabular*}
 }
 \newcommand{\experienceitem}[4]{%
-	#1 & \parbox[t]{0.83\textwidth}{%
+	#1 & \parbox[t]{0.8\textwidth}{%
 		 \textbf{#2}% 
 		 \hfill%
 		 {\footnotesize#3}%
