@@ -135,20 +135,20 @@
 
 % --- PROFILE PICTURE --- %
 
-\newcommand{\makepicture}[1]{
+% \newcommand{\makepicture}[1]{
 
-\newlength{\picureradius}
-\setlength{\picureradius}{#1}
+% \newlength{\picureradius}
+% \setlength{\picureradius}{#1}
 
-\begin{center}
-\begin{tikzpicture}
-\clip (0,0) circle (\picureradius);
-\node[anchor=center] at (0,0) {\includegraphics[width=2\picureradius]{profile.jpg}}; 
-\end{tikzpicture}
-\end{center}
-\vspace{5mm}
+% \begin{center}
+% \begin{tikzpicture}
+% \clip (0,0) circle (\picureradius);
+% \node[anchor=center] at (0,0) {\includegraphics[width=2\picureradius]{profile.jpg}}; 
+% \end{tikzpicture}
+% \end{center}
+% \vspace{5mm}
 
-}
+% }
 
 % --- CONTACT TABLE --- %
 
@@ -245,11 +245,12 @@
 	\end{tabular*}
 }
 \newcommand{\experienceitem}[4]{%
-	#1 & \parbox[t]{0.8\textwidth}{%
+		{#1}
+		 \parbox[t]{\textwidth}{%
 		 \textbf{#2}% 
 		 \hfill%
 		 {\footnotesize#3}%
-         \ifblank{#4}{}{#4 \\}
+         {\space #4 \\}
 	}\\
 }
 
